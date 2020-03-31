@@ -203,3 +203,20 @@ header .li .a {
 @media (max-width: 991px){.card-primary{margin-bottom:20px;padding-top: 0;transform: translateY(1px);}.card-primary .card-header-primary{background:#04091e;}
 .card-primary:hover .card-header-primary{background-color: #04091e;}}
 @media (max-width: 991px){.card-secondary{margin-bottom:20px;padding-top: 0;transform: translateY(1px);}.card-secondary .card-header-secondary{background:#f7631b;}}
+.font-48px {
+  font-size: 48px;
+}
+.line-hight-07em {
+  line-height: 0.7em !important;
+}
+.font-weight-800 {
+  font-weight: 800;
+}
+.selectDisable {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+@media (max-width: 991px){.media-counter{text-align: center !important;padding-top: 1.5em;padding-bottom: 1.5em;}}
