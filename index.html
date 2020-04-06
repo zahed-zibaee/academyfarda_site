@@ -26,10 +26,16 @@
 
 </head>
 
-<body>
+<body class="body-on-loading">
 
+  <!-- Start Loading -->
+  <div id="loading">
+    <img src="loading/three-dots.svg" width="200" alt="loading...">
+  </div>
+  <!-- End Loading -->
+  
   <!-- start header area -->
-  <header id="header" id="home">
+  <header id="header" id="home" class="">
     <div class="header-top hidden-less-375">
       <div class="container ">
         <div class="row d-flex justify-content-end">
@@ -81,8 +87,9 @@
     </div>
   </header>
   <!-- end header area -->
+
   <!-- start banner Area -->
-  <section class="banner-area relative" id="home">
+  <section class="banner-area relative " id="home">
     <div class="overlay overlay-bg"></div>
     <div class="container">
       <div class="row fullscreen d-flex align-items-center justify-content-between">
@@ -102,7 +109,7 @@
   <!-- End banner Area -->
 
   <!-- Start feature Area -->
-  <section class="feature-area">
+  <section class="feature-area ">
     <div class="container">
       <div class="row ">
         <div class="col-lg-4 order-1">
@@ -155,11 +162,8 @@
   </section>
   <!-- End feature Area -->
 
-
-
-
   <!-- Start counter Area -->
-  <section class="section-gap">
+  <section class="section-gap ">
     <div class="container">
       <div class="row counters pr-5">
         <div class="col-lg-3 col-md-6 col-sm-12">
@@ -283,9 +287,8 @@
   </section>
   <!-- End Video area -->
 
-
   <!-- Start cta-two Area -->
-  <section class="cta-two-area">
+  <section class="cta-two-area ">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 d-flex justify-content-start text-white">
@@ -307,7 +310,7 @@
   <!-- End cta-two Area -->
 
   <!-- start footer Area -->
-  <footer class="footer-area section-gap">
+  <footer class="footer-area section-gap ">
     <div class="container">
       <div class="row">
         <div class="col-lg-2 col-md-6 col-sm-6">
@@ -378,10 +381,18 @@
   </footer>
   <!-- End footer Area -->
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- jQuery -->
   <script src="jquery/jquery.min.js"></script>
+  <!-- Loading Scripts -->
+  <script>
+    $(window).on("load", function(){
+      $("#loading").fadeOut("slow");
+      $("body").removeClass("body-on-loading")
+    });
+  </script>
+  <!-- Popper.js -->
   <script src="pooper/popper.min.js"></script>
+  <!-- Bootstrap JS -->
   <script src="bootstrap_rtl/js/bootstrap.min.js"></script>
   <!-- Manual js for make header responsice to scrolling -->
   <script src="js/superfish.min.js"></script>
