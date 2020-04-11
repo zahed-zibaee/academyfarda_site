@@ -384,7 +384,7 @@ header .li .a {
   width: 100%;
   height: 100%;
   display: block;
-
+  cursor: pointer;
 }
 .icon-video {
   width: 80px;
@@ -458,4 +458,7 @@ header .li .a {
 .body-on-loading {
   overflow: hidden;
   height: 100vh;
+}
+.lg-outer {
+  direction: ltr !important;
 }

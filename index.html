@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css">
   <!-- lightGallery Popup -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/css/lightgallery.min.css">
-  
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
@@ -30,7 +30,6 @@
 </head>
 
 <body class="body-on-loading">
-
   <!-- Start Loading -->
   <div id="loading">
     <img src="loading/bars.svg" width="200" alt="loading...">
@@ -216,16 +215,24 @@
       </div>
   </section>
   <!-- End counter Area -->
+ 
+  <!-- Hidden video div -->
+  <div style="display:none;" id="video01" class="ltr-imp">
+    <video class="lg-video-object lg-html5" controls="" preload="none">
+        <source src="video/sample.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+  </div>
 
   <!-- Start Video area -->
   <section class="">
     <div class="container">
       <div class="video-area">
         <div class="row p-1">
-          <div class="col-lg-6 col-sm-12 pb-3 align-items-stretch d-flex">
-            <div alt="video-background" class="img img-video d-flex align-items-center" style="background-image: url(img/video-bg.jpg);">
+          <div id="html5-videos" class="col-lg-6 col-sm-12 pb-3 align-items-stretch d-flex">
+            <div alt="video-background" class="img img-video d-flex align-items-center" style="background-image: url(img/video-bg.jpg);" data-poster="img/video-bg.jpg" data-html="#video01">
               <div class="img-video d-flex justify-content-center align-items-center">
-                <a href="#video001" class="popup-video icon-video d-flex justify-content-center align-items-center">
+                <a class="popup-video icon-video d-flex justify-content-center align-items-center">
                   <i class="fas fa-caret-right fa-3x pl-1 btn-play" aria-hidden="true"></i>
                 </a>
               </div>
@@ -289,6 +296,8 @@
     </div>
   </section>
   <!-- End Video area -->
+
+ 
 
   <!-- Start cta-two Area -->
   <section class="cta-two-area ">
@@ -383,7 +392,7 @@
     </div>
   </footer>
   <!-- End footer Area -->
-
+  
   <!-- jQuery -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.min.js"></script>
   <!-- Loading Scripts -->
@@ -402,6 +411,7 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js"></script>
   <!-- lightGallery popup -->
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/js/lightgallery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/modules/lg-video.js"></script>
   <!-- Manual js -->
   <script src="js/main.js"></script>
 
