@@ -35,4 +35,57 @@ $(document).ready(function() {
     /*  video popup
     /*----------------------------------------------------*/
     $('#html5-videos').lightGallery(); 
+    /*----------------------------------------------------*/
+    //------- Owl Carusel  js --------//  
+    /*----------------------------------------------------*/
+    $('.owl-carousel').owlCarousel({
+        rtl: true,
+        items:2,
+        margin: 50,
+        loop: true,
+        autoplayHoverPause: true,
+        dots: true,
+        autoplayHoverPause: true,
+        smartSpeed:650,
+        autoplay: true,      
+            responsive: {
+            0: {
+                items: 1
+            },
+            480: {
+                items: 1,
+            },
+            768: {
+                items: 2,
+            }
+        }
+    });
+    /*----------------------------------------------------*/
+    //------- Collapse --------//  
+    /*----------------------------------------------------*/
+    function a() {
+        
+        //getting the next element
+        var content = $("#collapse1");
+        //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+        content.slideToggle();
+    
+    };
+    $("#new-question").click(function () {
+        
+        var header = $(this);
+        //getting the next element
+        var content = $("#collapse1");
+        //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+        content.slideToggle(500, function () {
+            //execute this after slideToggle is done
+            //change text of header based on visibility of content div
+            header.text(function () {
+                //change text based on condition
+                return content.is(":visible") ? "-" : "+";
+            });
+        });
+    
+    });
+
 });

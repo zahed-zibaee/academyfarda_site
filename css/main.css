@@ -36,7 +36,7 @@
 }
 
 body {
-    color: #777;
+    color: #999;
     font-family: 'isans', Yekan, 'Open sans', sans-serif, Yekan-font-family;
     font-size: 14px;
     font-weight: 300;
@@ -2806,7 +2806,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .single-blog .meta {
     font-weight: 400;
-    text-align: left;
+    text-align: right;
     margin-top: 40px
 }
 
@@ -2832,7 +2832,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .single-blog .details-btn .details {
     visibility: hidden;
     opacity: 0;
-    margin-left: -53px;
+    margin-left: -36px;
     font-weight: 600;
     text-transform: uppercase;
     display: -webkit-box;
@@ -2850,6 +2850,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .single-blog .details-btn:hover {
     width: 140px;
     background: #f7631b;
+    color: white;
     box-shadow: 0px 10px 20px 0px rgba(60, 64, 143, 0.2)
 }
 

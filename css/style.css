@@ -87,6 +87,7 @@
 .btn-primary:hover {
   background-color: #fff;
   color: #f7631b;
+  border: 1px solid #f7631b;
 }
 
 .text-nowrap {
@@ -302,7 +303,7 @@ header .li .a {
   line-height: 1.9em;
 }
 
-.details-btn {
+.details-btn2 {
   border: 1px solid #f7631b;
   width: 40px;
   height: 40px;
@@ -316,7 +317,7 @@ header .li .a {
   transform: translate(0px, -63px);
 }
 
-.details-btn .details {
+.details-btn2 .details {
   visibility: hidden;
   opacity: 0;
   margin-left: -58px;
@@ -330,12 +331,12 @@ header .li .a {
 
 }
 
-.details-btn .fa {
+.details-btn2 .fa {
   color: #f7631b;
   line-height: inherit;
 }
 
-.video-area:hover .details-btn {
+.video-area:hover .details-btn2 {
   width: 140px;
   background: #f7631b;
   box-shadow: 0px 10px 20px 0px rgba(60, 64, 143, 0.2);
@@ -348,18 +349,18 @@ header .li .a {
   margin-right: 8px;
 }
 
-.video-area:hover .details-btn span {
+.video-area:hover .details-btn2 span {
   color: #fff;
   font-weight: 600;
 }
 
 @media (max-width: 991px) {
-  .details-btn span {
+  .details-btn2 span {
     color: #fff !important;
     font-weight: 600;
   }
 
-  .details-btn {
+  .details-btn2 {
     width: auto;
     color: #fff !important;
     background: #f7631b;
@@ -375,7 +376,7 @@ header .li .a {
     color: #fff !important;
   }
 
-  .video-area:hover .details-btn {
+  .video-area:hover .details-btn2 {
     width: auto;
   }
 }
@@ -521,41 +522,45 @@ header .li .a {
 .circle-rm:hover {
   background-color: #04091e;
   color: #fff;
-  -webkit-animation: pulsate-fwd 0.8s ease-in-out infinite both;
-  animation: pulsate-fwd 0.8s ease-in-out infinite both;
+  -webkit-animation: pulsate-fwd 0.9s ease-in-out infinite both;
+  animation: pulsate-fwd 0.9s ease-in-out infinite both;
 }
+
 @media (max-width: 575px) {
   .arrow-rm2 {
     display: none;
     opacity: 0;
   }
+
   .circle-rm {
     width: 30vw !important;
     height: 30vw !important;
   }
+
   .circle-rm2 {
     justify-content: center !important;
   }
+
   .circle001 {
     margin-left: -40vw;
   }
-  
+
   .circle002 {
     margin-left: -24vw;
   }
-  
+
   .circle003 {
     margin-left: -8vw;
   }
-  
+
   .circle004 {
     margin-left: 8vw;
   }
-  
+
   .circle005 {
     margin-left: 24vw;
   }
-  
+
   .circle006 {
     margin-left: 40vw;
   }
@@ -579,7 +584,7 @@ header .li .a {
 }
 
 @media (min-width: 575px) and (max-width: 991px) {
-  
+
   .circle-rm2 {
     justify-content: space-between !important;
   }
@@ -592,8 +597,8 @@ header .li .a {
   }
 
   50% {
-    -webkit-transform: scale(1.15);
-    transform: scale(1.15);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   100% {
@@ -609,8 +614,8 @@ header .li .a {
   }
 
   50% {
-    -webkit-transform: scale(1.15);
-    transform: scale(1.15);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   100% {
@@ -647,4 +652,88 @@ header .li .a {
 .circle006 {
   background-color: #ffe7de;
   color: #202020
+}
+
+.font-size15 {
+  font-size: 15px !important;
+}
+
+.form-control {
+  height: calc(2em + .75rem + 2px);
+  border: 1px solid #000;
+
+}
+
+.form-control:focus {
+  color: #404040;
+  background-color: #fff;
+  border-color: #f7631b;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(247, 99, 27, 0.2);
+}
+
+@media (max-width: 991px) {
+  .cta-two-btn {
+    padding-top: 5vh;
+  }
+}
+
+.text-orange {
+  color: #f7631b;
+}
+
+@media (max-width: 991px) {
+  .single-blog .details-btn {
+    width: 140px;
+    background: #f7631b;
+    color: white;
+    box-shadow: 0px 10px 20px 0px rgba(60, 64, 143, 0.2)
+  }
+
+  .single-blog .details-btn .details {
+    margin-left: 0;
+    visibility: visible;
+    opacity: 1;
+    margin-right: 8px
+  }
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #f7631b;
+}
+.owl-theme .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    background: #D6D6D6;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity .2s ease;
+    border-radius: 0px;
+
+}
+.owl-dots .active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.section-gap2 {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+.btn-group-lg>.btn, .btn-md {
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  border-radius: 0rem;
+}
+.single-blog:hover .details-btn {
+  width: 140px;
+  background: #f7631b;
+  color: white;
+  box-shadow: 0px 10px 20px 0px rgba(60, 64, 143, 0.2);
+}
+.single-blog:hover .details-btn .details {
+  margin-left: 0;
+  visibility: visible;
+  opacity: 1;
+  margin-right: 8px
 }
