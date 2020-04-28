@@ -737,3 +737,40 @@ header .li .a {
   opacity: 1;
   margin-right: 8px
 }
+.section-gap3 {
+  padding-bottom: 120px;
+}
+.galery-links{
+  padding-top: 20px;
+  padding-right: 10px ;
+}
+.galery-links button {
+  color:#f7631b;
+  background-color: #fff;
+  margin-left: 10px;
+  padding: 5px;
+  border: none;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.galery-links button:hover {
+  color: #fff;
+  cursor: pointer;
+}
+.activate{
+  color:#fff !important;
+  background-color: #f7631b !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.isotope .isotope-item 
+{
+  -webkit-transition-property: right, top, -webkit-transform, opacity;
+     -moz-transition-property: right, top, -moz-transform, opacity;
+      -ms-transition-property: right, top, -ms-transform, opacity;
+       -o-transition-property: right, top, -o-transform, opacity;
+          transition-property: right, top, transform, opacity;
+}
+.element-item {
+  float: right !important;
+}

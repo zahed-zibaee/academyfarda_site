@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    "use strict";
 
     var window_width = $(window).width(),
         window_height = window.innerHeight,
@@ -35,6 +34,13 @@ $(document).ready(function() {
     /*  video popup
     /*----------------------------------------------------*/
     $('#html5-videos').lightGallery(); 
+    $('.aniimated-thumbnials').lightGallery({
+        autoplay:true,
+        fourceAutoplay:true,
+        download:false,
+        selector: '.include-in-gallery'
+        
+    });
     /*----------------------------------------------------*/
     //------- Owl Carusel  js --------//  
     /*----------------------------------------------------*/
@@ -87,5 +93,58 @@ $(document).ready(function() {
         });
     
     });
+    /*----------------------------------------------------*/
+    //------- Isotope --------//  
+    /*----------------------------------------------------*/
+    var $grid = $('.grid').isotope({
+        itemSelector: '.element-item',
+        layoutMode: 'fitRows',
+        originLeft: false,
+    });
+    // bind filter button click
+    var filtersElem = document.querySelector('.filters-button-group');
+    filtersElem.addEventListener( 'click', function( event ) {
+    // only work with buttons
+    if ( !matchesSelector( event.target, 'button' ) ) {
+        return;
+    }
+    var filterValue = event.target.getAttribute('data-filter');
+    // use matching filter function
+    $grid.isotope({ filter: filterValue });
+    var felems = $grid.isotope('getFilteredItemElements');
+    var elems = $grid.isotope('getItemElements');
+    //alert(elems[0].getAttribute("class"));
+    for(var i=0 ; i < elems.length ; i++){
+        $(elems[i]).removeClass("include-in-gallery");
+    }
+    for(var i=0 ; i < felems.length ; i++){
+        $(felems[i]).addClass("include-in-gallery");
+    }
+    //reload lightGallery
+    var $gallery = $('.aniimated-thumbnials');
+    $gallery.data('lightGallery').destroy(true);
+    $('.aniimated-thumbnials').lightGallery({
+        autoplay:true,
+        fourceAutoplay:true,
+        download:false,
+        selector: '.include-in-gallery'
+    }); 
+    });
+    // change activate class on buttons
+    var buttonGroups = document.querySelectorAll('.galery-links');
+    for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
+    var buttonGroup = buttonGroups[i];
+    radioButtonGroup( buttonGroup );
+    }
 
+    function radioButtonGroup( buttonGroup ) {
+    buttonGroup.addEventListener( 'click', function( event ) {
+        // only work with buttons
+        if ( !matchesSelector( event.target, 'button' ) ) {
+        return;
+        }
+        buttonGroup.querySelector('.activate').classList.remove('activate');
+        event.target.classList.add('activate');
+        });
+    }
 });
