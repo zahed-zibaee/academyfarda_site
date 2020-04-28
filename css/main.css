@@ -39,7 +39,7 @@ body {
     color: #555;
     font-family: "IRANSans","tahoma";
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.625em;
     position: relative;
 }
@@ -115,7 +115,7 @@ h6 {
     line-height: 1.2em !important;
     margin-bottom: 0;
     margin-top: 0;
-    font-weight: 700
+    font-weight: 700;
 }
 
 .h1,
@@ -126,9 +126,9 @@ h6 {
 .h6 {
     margin-bottom: 0;
     margin-top: 0;
+    line-height: 1.2em !important;
     font-family: 'Yekan Bakh';
-    font-weight: 600;
-    color: #222
+    font-weight: 700;
 }
 
 h1,
@@ -4769,10 +4769,6 @@ dl.toggle.time-line:before {
     color: #777
 }
 
-.single-footer-widget ::selection {
-    background-color: #191919 !important;
-    color: #777
-}
 
 .single-footer-widget ::-webkit-input-placeholder {
     color: #777;
