@@ -36,8 +36,8 @@
 }
 
 body {
-    color: #999;
-    font-family: 'isans', Yekan, 'Open sans', sans-serif, Yekan-font-family;
+    color: #555;
+    font-family: "IRANSans","tahoma";
     font-size: 14px;
     font-weight: 300;
     line-height: 1.625em;
@@ -111,7 +111,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Yekan;
+    font-family: 'Yekan Bakh';
     line-height: 1.2em !important;
     margin-bottom: 0;
     margin-top: 0;
@@ -126,7 +126,7 @@ h6 {
 .h6 {
     margin-bottom: 0;
     margin-top: 0;
-    font-family: 'isans', Yekan, 'Open sans', sans-serif, Yekan-font-family, sans-serif;
+    font-family: 'Yekan Bakh';
     font-weight: 600;
     color: #222
 }
@@ -4808,7 +4808,7 @@ dl.toggle.time-line:before {
 }
 
 .footer-bottom {
-    padding-top: 50px
+    padding-top: 10px
 }
 
 .footer-bottom .footer-social {
