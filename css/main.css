@@ -2782,9 +2782,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     transition: all 0.3s ease 0s
 }
 
-.single-blog:hover img {
-    transform: scale(1.1)
-}
 
 .single-blog:hover h5 {
     color: #f7631b
@@ -2797,7 +2794,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     border-bottom: 1px solid #eee;
-    padding-bottom: 20px
+    padding-bottom: 20px;
 }
 
 .single-blog a {
@@ -2807,7 +2804,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 .single-blog .meta {
     font-weight: 400;
     text-align: right;
-    margin-top: 40px
 }
 
 @media (max-width: 991px) {
