@@ -786,6 +786,13 @@ header .li .a {
 }
 .single-blog:hover{
   border-color: #f7631b;
+  
+}
+.single-blog {
+  border-radius: 0;
+}
+.single-blog img {
+  border-radius: 0;
 }
 .profile {
   width: 30px;
