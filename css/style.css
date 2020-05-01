@@ -317,7 +317,7 @@ header .li .a {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  transform: translate(0px, -63px);
+  transform: translate(0px, -59px);
 }
 
 .details-btn2 .details {
@@ -806,4 +806,64 @@ header .li .a {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+}
+.n-link {
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  padding: 6px 1.2vw;
+  text-align: center;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 2px;
+}
+.n-link.active {
+  color: #f7631b;
+  background: transparent;
+  border-bottom: 1px solid #f7631b;
+  
+}
+.n-link:hover {
+  color: #f7631b;
+  background: transparent;
+  border-bottom: 1px solid #f7631b;
+  
+}
+.card-1 {
+  position: relative;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+}
+.card-body {
+  background: #f9f9ff
+}
+.course-details li{
+  background: #f9f9ff;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.course-details li h5{
+  color:#000;
+  padding-top: 4px;
+  
+}
+.course-details li span{
+  color:#555;
+  padding-bottom: 4px;
+}
+@media (max-width: 991px) {
+  .course-details{
+    margin-top: 30px;
+  }
 }
