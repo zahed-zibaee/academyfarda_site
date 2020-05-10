@@ -26,125 +26,116 @@ $(document).ready(function() {
     /*----------------------------------------------------*/
     /*  counter up
     /*----------------------------------------------------*/
-    $('.counter').counterUp({
-		delay: 5,
-        time: 1500
-	});
+    if ($(".counter")[0]){
+        $('.counter').counterUp({
+            delay: 5,
+            time: 1500
+        });
+    }
     /*----------------------------------------------------*/
     /*  video popup
     /*----------------------------------------------------*/
-    $('#html5-videos').lightGallery(); 
-    $('.aniimated-thumbnials').lightGallery({
-        autoplay:true,
-        fourceAutoplay:true,
-        download:false,
-        selector: '.include-in-gallery'
-        
-    });
+    if ($("#html5-videos")[0]){
+        $('#html5-videos').lightGallery(); 
+        $('.aniimated-thumbnials').lightGallery({
+            autoplay:true,
+            fourceAutoplay:true,
+            download:false,
+            selector: '.include-in-gallery'
+            
+        });
+    }
     /*----------------------------------------------------*/
     //------- Owl Carusel  js --------//  
     /*----------------------------------------------------*/
-    $('.owl-carousel').owlCarousel({
-        rtl: true,
-        items:2,
-        margin: 50,
-        loop: true,
-        autoplayHoverPause: true,
-        dots: true,
-        autoplayHoverPause: true,
-        smartSpeed:650,
-        autoplay: true,      
-            responsive: {
-            0: {
-                items: 1
-            },
-            480: {
-                items: 1,
-            },
-            768: {
-                items: 2,
+    if ($(".owl-carousel")[0]){
+        $('.owl-carousel').owlCarousel({
+            rtl: true,
+            items:2,
+            margin: 50,
+            loop: true,
+            autoplayHoverPause: true,
+            dots: true,
+            autoplayHoverPause: true,
+            smartSpeed:650,
+            autoplay: true,      
+                responsive: {
+                0: {
+                    items: 1
+                },
+                480: {
+                    items: 1,
+                },
+                768: {
+                    items: 2,
+                }
             }
-        }
-    });
-    /*----------------------------------------------------*/
-    //------- Collapse --------//  
-    /*----------------------------------------------------*/
-    function a() {
-        
-        //getting the next element
-        var content = $("#collapse1");
-        //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-        content.slideToggle();
-    
-    };
-    $("#new-question").click(function () {
-        
-        var header = $(this);
-        //getting the next element
-        var content = $("#collapse1");
-        //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-        content.slideToggle(500, function () {
-            //execute this after slideToggle is done
-            //change text of header based on visibility of content div
-            header.text(function () {
-                //change text based on condition
-                return content.is(":visible") ? "-" : "+";
-            });
         });
-    
-    });
+    }
+    /*----------------------------------------------------*/
+    //------- Collapse  --------//  
+    /*----------------------------------------------------*/
+    //------- Collapse QAA Home Page  --------//  
+    if ($("#new-question")[0]){
+        $("#new-question").click(function () {
+            $(this).text($("#collapseExample").hasClass("show") ? '+' : '-');
+        });
+    }
     /*----------------------------------------------------*/
     //------- Isotope --------//  
     /*----------------------------------------------------*/
-    var $grid = $('.grid').isotope({
-        itemSelector: '.element-item',
-        layoutMode: 'fitRows',
-        originLeft: false,
-    });
-    // bind filter button click
-    var filtersElem = document.querySelector('.filters-button-group');
-    filtersElem.addEventListener( 'click', function( event ) {
-    // only work with buttons
-    if ( !matchesSelector( event.target, 'button' ) ) {
-        return;
-    }
-    var filterValue = event.target.getAttribute('data-filter');
-    // use matching filter function
-    $grid.isotope({ filter: filterValue });
-    var felems = $grid.isotope('getFilteredItemElements');
-    var elems = $grid.isotope('getItemElements');
-    //alert(elems[0].getAttribute("class"));
-    for(var i=0 ; i < elems.length ; i++){
-        $(elems[i]).removeClass("include-in-gallery");
-    }
-    for(var i=0 ; i < felems.length ; i++){
-        $(felems[i]).addClass("include-in-gallery");
-    }
-    //reload lightGallery
-    var $gallery = $('.aniimated-thumbnials');
-    $gallery.data('lightGallery').destroy(true);
-    $('.aniimated-thumbnials').lightGallery({
-        autoplay:true,
-        fourceAutoplay:true,
-        download:false,
-        selector: '.include-in-gallery'
-    }); 
-    });
-    // change activate class on buttons
-    var buttonGroups = document.querySelectorAll('.galery-links');
-    for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
-    var buttonGroup = buttonGroups[i];
-    radioButtonGroup( buttonGroup );
-    }
-
-    function radioButtonGroup( buttonGroup ) {
-    buttonGroup.addEventListener( 'click', function( event ) {
+    if ($(".grid")[0]){
+        var $grid = $('.grid').isotope({
+            itemSelector: '.element-item',
+            layoutMode: 'fitRows',
+            originLeft: false,
+        });
+        // bind filter button click
+        var filtersElem = document.querySelector('.filters-button-group');
+        filtersElem.addEventListener( 'click', function( event ) {
         // only work with buttons
         if ( !matchesSelector( event.target, 'button' ) ) {
-        return;
+            return;
         }
-        buttonGroup.querySelector('.activate').classList.remove('activate');
-        event.target.classList.add('activate');
+        var filterValue = event.target.getAttribute('data-filter');
+        // use matching filter function
+        $grid.isotope({ filter: filterValue });
+        var felems = $grid.isotope('getFilteredItemElements');
+        var elems = $grid.isotope('getItemElements');
+        //alert(elems[0].getAttribute("class"));
+        for(var i=0 ; i < elems.length ; i++){
+            $(elems[i]).removeClass("include-in-gallery");
+        }
+        for(var i=0 ; i < felems.length ; i++){
+            $(felems[i]).addClass("include-in-gallery");
+        }
+        //reload lightGallery
+        var $gallery = $('.aniimated-thumbnials');
+        $gallery.data('lightGallery').destroy(true);
+        $('.aniimated-thumbnials').lightGallery({
+            autoplay:true,
+            fourceAutoplay:true,
+            download:false,
+            selector: '.include-in-gallery'
+        }); 
         });
+        // change activate class on buttons
+        var buttonGroups = document.querySelectorAll('.galery-links');
+        for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
+        var buttonGroup = buttonGroups[i];
+        radioButtonGroup( buttonGroup );
+        }
+    
+        function radioButtonGroup( buttonGroup ) {
+        buttonGroup.addEventListener( 'click', function( event ) {
+            // only work with buttons
+            if ( !matchesSelector( event.target, 'button' ) ) {
+            return;
+            }
+            buttonGroup.querySelector('.activate').classList.remove('activate');
+            event.target.classList.add('activate');
+            });
+        }
     }
+
 });

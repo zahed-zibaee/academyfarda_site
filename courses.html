@@ -59,9 +59,9 @@
               <h6><i class="fa fa-phone text-white mr-1 ml-3"></i></h6>
             </div>
             <div class="header-register">
-              <a href="#" class="btn-primary btn-sm text-nowrap padding-header-button">
-                <i class="fa fa-user"></i>&nbsp;پیش ثبت نام
-              </a>
+              <button href="#" class="btn-primary btn-sm text-nowrap padding-header-button disabled" data-toggle="modal-disabled" data-target="#exampleModal-disabled">
+                <i class="fa fa-user"></i>&nbsp;<span>ورود</span>&nbsp;<span>/</span>&nbsp;<span>ثبت نام</span>
+              </button>
             </div>
           </div>
         </div>
@@ -81,12 +81,12 @@
             </button>
             <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
               <div class="navbar-nav mr-auto mt-2 mt-lg-0 px-2">
-                <a class="nav-item nav-link px-3" href="#">خانه<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link px-3" href="#">خانه</a>
                 <a class="nav-item nav-link px-3 active" href="#">دوره‌ها</a>
+                <a class="nav-item nav-link px-3" href="#">سوالات متداول</a>
                 <a class="nav-item nav-link px-3" href="#">وبلاگ</a>
                 <a class="nav-item nav-link px-3" href="#">درباره ‌ما</a>
                 <a class="nav-item nav-link px-3" href="#">تماس با ما</a>
-                <a class="nav-item nav-link px-3" href="#">پنل کاربری</a>
               </div>
             </div>
           </nav>
@@ -104,13 +104,13 @@
     <div class="container">
       <div class="row d-flex align-items-center justify-content-center">
         <div class="about-content col-lg-12">
-          <h1 class="text-white">
-            دوره ها
+          <h1 class="text-white ">
+            <b>دوره ها</b>
           </h1>
-          <p class="text-white link-nav">
-            <a class="h px-1" href="">خانه </a>
-            <span class="fa fa-arrow-left px-1"></span>
-            <a class="h5 px-1" href=""> دوره ها</a>
+          <p class="text-white link-nav d-flex justify-content-center align-items-center">
+            <a class="h5" href="">خانه </a>
+            <span class="fa fa-arrow-left px-3"></span>
+            <a class="h5" href="">دوره ها</a>
           </p>
         </div>
       </div>
@@ -119,7 +119,196 @@
   <!-- End banner Area -->
 
   <!-- Start courses -->
-  
+  <section class="section-gap">
+    <div class="container">
+      <div class="row pb-5">
+        <div class="col-12">
+          <h1 class="text-black text-center">دوره های ارائه شده</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-12">
+          <div class="card-2 mb-sm-3 mb-lg-0">
+            <div class="card-body">
+              <form id="search-course" action="submit">
+                <h4 class="card-title text-black">جست و جو:</h4>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-search text-orange" aria-hidden="true"></i>  </span>
+                  </div>
+                  <input type="text" name="search" class="form-control" placeholder="" aria-label="search" aria-describedby="basic-addon1">
+                </div>
+                <div class="switch-wrap d-flex justify-content-between">
+                  <p>فقط کلاس‌های فعال</p>
+                  <div class="primary-switch">
+                    <input type="checkbox" name="active" id="primary-switch" checked>
+                    <label for="primary-switch"></label>
+                  </div>
+                </div> 
+                <h4 class="card-title text-black mt-3">استاد:</h4>
+                <div class="custom-control custom-checkbox my-1">
+                  <input type="checkbox" name="Te-m.jalali" value="1" class="custom-control-input" id="customControlInline000">
+                  <label class="custom-control-label" for="customControlInline000">مهدی جلالی</label>
+                </div>
+                <div class="custom-control custom-checkbox my-1">
+                  <input type="checkbox" name="Te-m.asvadi" class="custom-control-input" id="customControlInline001">
+                  <label class="custom-control-label" for="customControlInline001">اسودی</label>
+                </div>
+                <h4 class="card-title text-black mt-3">ساعد کلاس:</h4>
+                <div class="custom-control custom-checkbox my-1">
+                  <input type="checkbox" name="Ti-9-12" class="custom-control-input" id="customControlInline002">
+                  <label class="custom-control-label" for="customControlInline002">9-12</label>
+                </div>
+                <div class="custom-control custom-checkbox my-1">
+                  <input type="checkbox" name="Ti-13-16" class="custom-control-input" id="customControlInline003">
+                  <label class="custom-control-label" for="customControlInline003">13-16</label>
+                </div>
+                <div class="custom-control custom-checkbox my-1">
+                  <input type="checkbox" name="Ti-16-18" class="custom-control-input" id="customControlInline004">
+                  <label class="custom-control-label" for="customControlInline004">16-18</label>
+                </div>
+                <h4 class="card-title text-black mt-3">نوع دوره:</h4>
+                <div class="custom-control custom-checkbox my-1">
+                  <input type="checkbox" name="Ki-common" class="custom-control-input" id="customControlInline005">
+                  <label class="custom-control-label" for="customControlInline005">مقدماتی و متوسطه</label>
+                </div>
+                <div class="custom-control custom-checkbox my-1">
+                  <input type="checkbox" name="Ki-pro" class="custom-control-input" id="customControlInline006">
+                  <label class="custom-control-label" for="customControlInline006"> فوق حرفه ای</label>
+                </div>
+                <h4 class="card-title text-black mt-3">تاریخ شروع:</h4>
+                <div class="custom-control custom-checkbox my-1">
+                  <input type="checkbox" name="Sc-1w" class="custom-control-input" id="customControlInline007">
+                  <label class="custom-control-label" for="customControlInline007">تا یک هفته بعدی</label>
+                </div>
+                <div class="custom-control custom-checkbox my-1">
+                  <input type="checkbox" name="Sc-1m" class="custom-control-input" id="customControlInline008">
+                  <label class="custom-control-label" for="customControlInline008">تا یک ماه دیگر</label>
+                </div>
+                <div class="custom-control custom-checkbox my-1">
+                  <input type="checkbox" name="Sc-1s" class="custom-control-input" id="customControlInline009">
+                  <label class="custom-control-label" for="customControlInline009">تا سه ماه بعد</label>
+                </div>
+                <h4 class="card-title text-black mt-3">محل برگزاری:</h4>
+                <div class="custom-control custom-checkbox my-1">
+                  <input type="checkbox" name="Lo-v" class="custom-control-input" id="customControlInline010">
+                  <label class="custom-control-label" for="customControlInline010">شعبه میدان انقلاب</label>
+                </div>
+                <div class="custom-control custom-checkbox my-1">
+                  <input type="checkbox" name="Lo-e" class="custom-control-input" id="customControlInline011">
+                  <label class="custom-control-label" for="customControlInline011">شعبه میدان ولیعصر</label>
+                </div>
+                <a id="search-btn" href="#anchor" class="btn-primary btn-md d-block text-center mt-3 disabled">اعمال فیلتر</a>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 col-12 trans-y-4" >
+          <span id="anchor"></span> 
+          <div class="row" >
+            <div class="col-lg-6 col-12 px-lg-1 px-md-3 my-1">
+              <div class="card-2" >
+                <div class="card-body">
+                  <h5 class="card-title"><a href="">دوره عمومی</a></h5>
+                  <h6 class="card-subtitle mb-2 text-muted">25 مهر 98</h6>
+                  <p class="card-text">مدرس: استادی <a class="text-black" href="">مهدی جلالی</a></p>
+                  <span>ساعت: 9-12 شنبه تا پنج شنبه</span><br>
+                  <span>سطح: مقدماتی</span><br>
+                  <span>مدرک: بین المللی فنی و حرفه‌ای</span><br>
+                  <span>وضعیت: فعال</span><br>
+                  <span>ظرفیت: 15</span><br>
+                  <span>محل برگزاری: شعبه ولیعصر</span><br>
+                  <a href="#" class="btn-primary d-block text-center btn-md mt-3">بیشتر </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12 px-lg-1 px-md-3 my-1">
+              <div class="card-2" >
+                <div class="card-body">
+                  <h5 class="card-title"><a href="">دوره عمومی</a></h5>
+                  <h6 class="card-subtitle mb-2 text-muted">25 مهر 98</h6>
+                  <p class="card-text">مدرس: استادی <a class="text-black" href="">مهدی جلالی</a></p>
+                  <span>ساعت: 9-12 شنبه تا پنج شنبه</span><br>
+                  <span>سطح: مقدماتی</span><br>
+                  <span>مدرک: بین المللی فنی و حرفه‌ای</span><br>
+                  <span>وضعیت: فعال</span><br>
+                  <span>ظرفیت: 15</span><br>
+                  <span>محل برگزاری: شعبه ولیعصر</span><br>
+                  <a href="#" class="btn-primary d-block text-center btn-md mt-3">بیشتر </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12 px-lg-1 px-md-3 my-1">
+              <div class="card-2" >
+                <div class="card-body">
+                  <h5 class="card-title"><a href="">دوره عمومی</a></h5>
+                  <h6 class="card-subtitle mb-2 text-muted">25 مهر 98</h6>
+                  <p class="card-text">مدرس: استادی <a class="text-black" href="">مهدی جلالی</a></p>
+                  <span>ساعت: 9-12 شنبه تا پنج شنبه</span><br>
+                  <span>سطح: مقدماتی</span><br>
+                  <span>مدرک: بین المللی فنی و حرفه‌ای</span><br>
+                  <span>وضعیت: فعال</span><br>
+                  <span>ظرفیت: 15</span><br>
+                  <span>محل برگزاری: شعبه ولیعصر</span><br>
+                  <a href="#" class="btn-primary d-block text-center btn-md mt-3">بیشتر </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12 px-lg-1 px-md-3 my-1">
+              <div class="card-2" >
+                <div class="card-body">
+                  <h5 class="card-title"><a href="">دوره عمومی</a></h5>
+                  <h6 class="card-subtitle mb-2 text-muted">25 مهر 98</h6>
+                  <p class="card-text">مدرس: استادی <a class="text-black" href="">مهدی جلالی</a></p>
+                  <span>ساعت: 9-12 شنبه تا پنج شنبه</span><br>
+                  <span>سطح: مقدماتی</span><br>
+                  <span>مدرک: بین المللی فنی و حرفه‌ای</span><br>
+                  <span>وضعیت: فعال</span><br>
+                  <span>ظرفیت: 15</span><br>
+                  <span>محل برگزاری: شعبه ولیعصر</span><br>
+                  <a href="#" class="btn-primary d-block text-center btn-md mt-3">بیشتر </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12 px-lg-1 px-md-3 my-1">
+              <div class="card-2" >
+                <div class="card-body">
+                  <h5 class="card-title"><a href="">دوره عمومی</a></h5>
+                  <h6 class="card-subtitle mb-2 text-muted">25 مهر 98</h6>
+                  <p class="card-text">مدرس: استادی <a class="text-black" href="">مهدی جلالی</a></p>
+                  <span>ساعت: 9-12 شنبه تا پنج شنبه</span><br>
+                  <span>سطح: مقدماتی</span><br>
+                  <span>مدرک: بین المللی فنی و حرفه‌ای</span><br>
+                  <span>وضعیت: فعال</span><br>
+                  <span>ظرفیت: 15</span><br>
+                  <span>محل برگزاری: شعبه ولیعصر</span><br>
+                  <a href="#" class="btn-primary d-block text-center btn-md mt-3">بیشتر </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12 px-lg-1 px-md-3 my-1">
+              <div class="card-2" >
+                <div class="card-body">
+                  <h5 class="card-title"><a href="">دوره عمومی</a></h5>
+                  <h6 class="card-subtitle mb-2 text-muted">25 مهر 98</h6>
+                  <p class="card-text">مدرس: استادی <a class="text-black" href="">مهدی جلالی</a></p>
+                  <span>ساعت: 9-12 شنبه تا پنج شنبه</span><br>
+                  <span>سطح: مقدماتی</span><br>
+                  <span>مدرک: بین المللی فنی و حرفه‌ای</span><br>
+                  <span>وضعیت: فعال</span><br>
+                  <span>ظرفیت: 15</span><br>
+                  <span>محل برگزاری: شعبه ولیعصر</span><br>
+                  <a href="#" class="btn-primary d-block text-center btn-md mt-3">بیشتر </a>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- End courses Area -->
 
   <!-- Start cta-two Area -->
@@ -248,9 +437,51 @@
     </div>
   </footer>
   <!-- End footer Area -->
+  
+  <!-- Start Hidden Model Register/Login -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-flex align-items-center ">
+          <h5 class="modal-title " id="exampleModalLabel">ورود / ثبت‌نام</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              برای 
+              <b>ورود</b>
+              یا
+              <b>ثبت‌نام</b> 
+              شماره تلفن همراه خود را وارد کنید
+              <div class="input-group mb-3 px-1 pt-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">شماره همراه</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" id="id_username" name="username" autocomplete="off" placeholder="09XXXXXXXXX" required="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button href="" class="btn-primary btn-md">ادامه</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Hidden Model Register/Login -->
 
   <!-- jQuery -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script>
+    // Loading Scripts
+    $(window).on("load", function () {
+      $("#loading").fadeOut("slow");
+      $("body").removeClass("body-on-loading")
+    });
+  </script>
   <!-- Popper.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
@@ -258,22 +489,8 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@laylazi/bootstrap-rtl@4.4.101/dist/js/bootstrap.min.js"></script>
   <!-- Manual js -->
-  <script>
-    // Loading Scripts
-    $(window).on("load", function () {
-      $("#loading").fadeOut("slow");
-      $("body").removeClass("body-on-loading")
-    });
-    // scrool script
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > 100) {
-        $('#header').addClass('header-scrolled');
-      } else {
-        $('#header').removeClass('header-scrolled');
-      }
-    });
-  </script>
-
+  <script src="js/main.js"></script>
+  
 </body>
 
 </html>

@@ -42,6 +42,7 @@ body {
     font-weight: 400;
     line-height: 1.625em;
     position: relative;
+    
 }
 
 ol,
@@ -1302,8 +1303,8 @@ h6 {
 
 .unordered-list li {
     position: relative;
-    padding-left: 30px;
-    line-height: 1.82em !important
+    padding-right: 30px;
+    line-height: 1.82em !important;
 }
 
 .unordered-list li:before {
@@ -1314,7 +1315,7 @@ h6 {
     border: 3px solid #f7631b;
     background: #fff;
     top: 4px;
-    left: 0;
+    right: 0;
     border-radius: 50%
 }
 

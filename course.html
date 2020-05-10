@@ -59,9 +59,9 @@
               <h6><i class="fa fa-phone text-white mr-1 ml-3"></i></h6>
             </div>
             <div class="header-register">
-              <a href="#" class="btn-primary btn-sm text-nowrap padding-header-button">
-                <i class="fa fa-user"></i>&nbsp;پیش ثبت نام
-              </a>
+              <button href="#" class="btn-primary btn-sm text-nowrap padding-header-button disabled" data-toggle="modal-disabled" data-target="#exampleModal-disabled">
+                <i class="fa fa-user"></i>&nbsp;<span>ورود</span>&nbsp;<span>/</span>&nbsp;<span>ثبت نام</span>
+              </button>
             </div>
           </div>
         </div>
@@ -81,12 +81,12 @@
             </button>
             <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
               <div class="navbar-nav mr-auto mt-2 mt-lg-0 px-2">
-                <a class="nav-item nav-link px-3" href="#">خانه<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link px-3" href="#">خانه</a>
                 <a class="nav-item nav-link px-3 active" href="#">دوره‌ها</a>
+                <a class="nav-item nav-link px-3" href="#">سوالات متداول</a>
                 <a class="nav-item nav-link px-3" href="#">وبلاگ</a>
                 <a class="nav-item nav-link px-3" href="#">درباره ‌ما</a>
                 <a class="nav-item nav-link px-3" href="#">تماس با ما</a>
-                <a class="nav-item nav-link px-3" href="#">پنل کاربری</a>
               </div>
             </div>
           </nav>
@@ -104,15 +104,15 @@
     <div class="container">
       <div class="row d-flex align-items-center justify-content-center">
         <div class="about-content col-lg-12">
-          <h1 class="text-white">
-            دوره عمومی
+          <h1 class="text-white ">
+            <b>دوره عمومی</b>
           </h1>
-          <p class="text-white link-nav">
-            <a class="h px-1" href="">خانه </a>
-            <span class="fa fa-arrow-left px-1"></span>
-            <a class="h5 px-1" href=""> دوره ها</a>
-            <span class="fa fa-arrow-left px-1"></span>
-            <a class="h5 px-1" href=""> دوره عمومی</a>
+          <p class="text-white link-nav d-flex justify-content-center align-items-center">
+            <a class="h5" href="">خانه </a>
+            <span class="fa fa-arrow-left px-3"></span>
+            <a class="h5" href="">دوره ها</a>
+            <span class="fa fa-arrow-left px-3"></span>
+            <a class="h5" href="">دوره عمومی</a>
           </p>
         </div>
       </div>
@@ -168,7 +168,7 @@
 
               </div>
               <div class="tab-pane card-body" id="tabc3" role="tabpanel" aria-labelledby="tab3">
-                <ul class="course-list">
+                <ul class="course-list unordered-list">
                   <li class="justify-content-between d-flex">
                     <p>آشنایی با تعمییرات موبایل</p>
                   </li>
@@ -259,11 +259,11 @@
                 </div>
               </div>
               <div class="tab-pane card-body" id="tabc5" role="tabpanel" aria-labelledby="tab5">
-                <ul class="course-list">
-                  <li class="justify-content-between d-flex">
+                <ul class="course-list unordered-list">
+                  <li class="justify-content-start d-flex">
                     <p>معرفی کارگاه</p>
                   </li>
-                  <li class="justify-content-between d-flex">
+                  <li class="justify-content-strat d-flex">
                     <p>آشنایی با ابزار تعمیرات</p>
                   </li>
                 </ul>
@@ -426,8 +426,50 @@
   </footer>
   <!-- End footer Area -->
 
+  <!-- Start Hidden Model Register/Login -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-flex align-items-center ">
+          <h5 class="modal-title " id="exampleModalLabel">ورود / ثبت‌نام</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              برای 
+              <b>ورود</b>
+              یا
+              <b>ثبت‌نام</b> 
+              شماره تلفن همراه خود را وارد کنید
+              <div class="input-group mb-3 px-1 pt-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">شماره همراه</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" id="id_username" name="username" autocomplete="off" placeholder="09XXXXXXXXX" required="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button href="" class="btn-primary btn-md">ادامه</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Hidden Model Register/Login -->
+  
   <!-- jQuery -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script>
+    // Loading Scripts
+    $(window).on("load", function () {
+      $("#loading").fadeOut("slow");
+      $("body").removeClass("body-on-loading")
+    });
+  </script>
   <!-- Popper.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
@@ -435,22 +477,8 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@laylazi/bootstrap-rtl@4.4.101/dist/js/bootstrap.min.js"></script>
   <!-- Manual js -->
-  <script>
-    // Loading Scripts
-    $(window).on("load", function () {
-      $("#loading").fadeOut("slow");
-      $("body").removeClass("body-on-loading")
-    });
-    // scrool script
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > 100) {
-        $('#header').addClass('header-scrolled');
-      } else {
-        $('#header').removeClass('header-scrolled');
-      }
-    });
-  </script>
-
+  <script src="js/main.js"></script>
+  
 </body>
 
 </html>
