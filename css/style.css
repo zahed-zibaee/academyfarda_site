@@ -100,6 +100,7 @@
   background-color: #f7631b;
   border-color: #f7631b;
   box-shadow: 0 0 0 0.2rem rgba(247,99,27,.5);
+  outline:none;
 }
 .btn-light {
   background-color: #4cd3e3;
@@ -125,6 +126,7 @@
   background-color: #4cd3e3;
   border-color: #4cd3e3;
   box-shadow: 0 0 0 0.2rem rgba(27, 214, 247, 0.5);
+  outline:none;
 }
 .btn-info {
   background-color: #17a2b8;
@@ -150,6 +152,7 @@
   background-color: #17a2b8;
   border-color: #17a2b8;
   box-shadow: 0 0 0 0.2rem rgba(27, 214, 247, 0.5);
+  outline:none;
 }
 .btn-secondary  {
   background-color: #6c757d;
@@ -175,6 +178,7 @@
   background-color: #6c757d;
   border-color: #6c757d;
   box-shadow: 0 0 0 0.2rem rgba(214, 214, 214, 0.5);
+  outline:none;
 }
 .disabled {
   color: #fff !important;
@@ -1089,4 +1093,53 @@ header .li .a {
 }
 .branch3{
   padding-right: 6vw;
+}
+.accordion .card-body {
+  background-color: #fff !important;
+}
+.accordion .card-2 {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border:none !important;
+}
+.accordion .collapsed {
+  background-color:#f9f9ff !important;
+  border-color: #f9f9ff !important;
+  color: #303030;
+}
+.accordion .btn-primary.focus, .accordion .btn-primary:focus {
+  outline:none;
+  box-shadow: none;
+}
+.accordion button:after {
+  position: absolute;
+  left: 10px;
+  content: "\f106";
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 700; 
+  color: #fff;
+}
+.accordion .collapsed:after {
+  position: absolute;
+  left: 10px;
+  content: "\f107";
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 700; 
+  color: #303030;
+}
+.accordion .collapsed:hover:after {
+  position: absolute;
+  left: 10px;
+  content: "\f107";
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 700; 
+  color: #303030;
+}
+.accordion button:hover:after {
+  position: absolute;
+  left: 10px;
+  content: "\f106";
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 700; 
+  color: #fff;
 }
