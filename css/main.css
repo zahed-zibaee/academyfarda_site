@@ -4324,3 +4324,26 @@ dl.toggle.time-line:before {
 .footer-bottom .footer-social a:hover {
     background-color: #f7631b
 }
+.card-3 {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0;
+    border-radius: 0rem;
+}
+.card-body-3 {
+    background: #fff;
+}
+.card-body-3 {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 0rem;
+
+}

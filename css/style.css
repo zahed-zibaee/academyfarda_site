@@ -410,7 +410,6 @@ header .li .a {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  transform: translate(0px, -59px);
 }
 
 .details-btn2 .details {
