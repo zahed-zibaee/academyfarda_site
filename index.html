@@ -63,7 +63,7 @@
               <h6><i class="fa fa-phone text-white mr-1 ml-3"></i></h6>
             </div>
             <div class="header-register">
-              <button href="#" class="btn-primary btn-sm text-nowrap padding-header-button disabled" data-toggle="modal-disabled" data-target="#exampleModal-disabled">
+              <button href="#" class="btn-primary btn-sm text-nowrap padding-header-button disabled" data-toggle="modal" data-target="#exampleModalerror">
                 <i class="fa fa-user"></i>&nbsp;<span>ورود</span>&nbsp;<span>/</span>&nbsp;<span>ثبت نام</span>
               </button>
             </div>
@@ -653,18 +653,93 @@
           </div>
         </div>
         <div class="col-lg-4 col-md-6 search-course-right section-gap">
-          <form class="form-wrap" action="#">
+          <form id="preregister_form" class="form-wrap">
             <h3 class="text-white pb-30 text-center mb-30 ">پیش ثبت نام دوره عمومی</h3>
-            <input type="text" class="form-control is-valid2" name="name" placeholder="نام شما" required>
-            <input type="text" class="form-control is-valid2" name="phone" placeholder="شماره تماس" required>
-            <input type="text" class="form-control is-valid2" name="email" placeholder='آدرس ایمیل'>
-            <button class="btn-primary btn-lg btn-block disabled">پیش ثبت نام</button>
+            <input id="input_name" type="text" class="form-control" name="name" placeholder="نام و نام خانوادگی" autocomplete="off" oninvalid="setCustomValidity('کامل کردن این فیلد اجباری است')" onchange="try{setCustomValidity('')}catch(e){}" required>
+            <input id="input_phone" type="text" class="form-control" name="phone" placeholder="شماره تماس" autocomplete="off" oninvalid="setCustomValidity('کامل کردن این فیلد اجباری است')" onchange="try{setCustomValidity('')}catch(e){}" required>
+            <textarea class="form-control" name="question" placeholder='اگر توضیحاتی لازم است اینجا برای ما بنویسید' rows="3" autocomplete="off"></textarea>
+            <button type="submit" class="btn-primary btn-lg btn-block">پیش ثبت نام</button>
           </form>
         </div>
       </div>
     </div>
   </section>
   <!-- End pere register Area -->
+  <!-- Start Hidden Model Pre Register sucsses -->
+  <div class="modal fade" id="Modalregistersuccess" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-flex align-items-center ">
+          <h5 class="modal-title " id="exampleModalLabel">پیش ثبت‌نام</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              <h4 class="text-success text-center">شما با موفقیت پیش ثبت نام شده اید.</h4><br>
+              <span>سپاس گزاریم از شما بابت این که برای ما وقت گذاشتید.</span><br>
+              <span>در اولین فرصت ما با شما تماس خواهیم گرفت.</span><br>
+              <div class="pt-3">
+                <b>کد تخفیف:</b>
+                <span>PREREG</span><br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Hidden Model Pre Register sucsses -->
+  <!-- Start Hidden Model Pre Register error -->
+  <div class="modal fade" id="Modalregistererror" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-flex align-items-center ">
+          <h5 class="modal-title " id="exampleModalLabel">پیش ثبت‌نام</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              <h4 class="text-danger text-center">عملیات پیش ثبت‌نام با مشکل مواجه شده است.</h4><br>
+              <span>لطفا دوباره تلاش کنید و یا با ما تماس حاصل نمایید.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Hidden Model Pre Register error -->
+  <!-- Start Hidden Model Pre Register phone number error -->
+  <div class="modal fade" id="Modalregisterwarning" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-flex align-items-center ">
+          <h5 class="modal-title " id="exampleModalLabel">پیش ثبت‌نام</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              <h4 class="text-danger text-center">عملیات پیش ثبت‌نام با مشکل مواجه شده است.</h4><br>
+              <span class="text-warning">شماره وارد شده تکراری است.</span><br>
+              <span>لطفا دوباره تلاش کنید و یا با ما تماس حاصل نمایید.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Hidden Model Pre Register error -->
+  
 
   <!-- Start galery area -->
   <section class="section-gap3">
@@ -906,6 +981,35 @@
   </div>
   <!-- End Hidden Model Register/Login -->
 
+  <!-- Start Hidden Model Register/Login not working -->
+  <div class="modal fade" id="exampleModalerror" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-flex align-items-center ">
+          <h5 class="modal-title " id="exampleModalLabel">ورود / ثبت‌نام</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              این قسمت در دست 
+              <b>توسعه</b>
+              است
+            </div>
+            <div class="col-12">
+              <div class="d-flex justify-content-center">
+                <img class="py-5" src="img/under_development.png">
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Hidden Model Register/Login -->
 
   <!-- jQuery -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>

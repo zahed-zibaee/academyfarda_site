@@ -137,5 +137,79 @@ $(document).ready(function() {
             });
         }
     }
-
+    /*----------------------------------------------------*/
+    //------- pre register --------//  
+    /*----------------------------------------------------*/
+    if ($("#preregister_form")[0]){
+        var name_valid;
+        var phone_valid;
+        $("#input_name").on("change keyup paste", function(){
+            if($(this)[0].value.length < 3){
+                $(this).removeClass("is-valid");
+                $(this).addClass("is-invalid");
+                name_valid = false;
+            } else {
+                $(this).removeClass("is-invalid");
+                $(this).addClass("is-valid");
+                name_valid = true;
+            }
+        });
+        $("#input_phone").on("change keyup paste", function(){
+            if($(this)[0].value.length < 8 || isNaN($(this)[0].value)){
+                $(this).removeClass("is-valid");
+                $(this).addClass("is-invalid");
+                phone_valid = false;
+            } else {
+                $(this).removeClass("is-invalid");
+                $(this).addClass("is-valid");
+                phone_valid = true;
+            }
+        });
+        $(document).on("submit",'#preregister_form',function(e) {
+            e.preventDefault();
+            var $form = $(this);
+            var data  = $form.serializeArray();
+            if (name_valid == true && phone_valid == true) {
+                data.push({
+                    name: 'token',
+                    value: 'OcfLGIGkoex3SDI1o2AeHTBdpwWA1usEuxf04JbiNy9uZHlbzLd6sFaI1U6Qemiy'
+                    });
+                
+                    $.ajax({
+                    url: 'https://academyfarda.com/leads/api/submitnew/',
+                    method: 'POST',
+                    data: data,
+                    crossDomain: true,
+                    success: function(res) {
+                        if (res.status == 'submited') {
+                            $('#Modalregistersuccess').modal('toggle');
+                        } else if (res.status == 'registeration_error') {
+                            console.log(res);
+                            $('#Modalregistererror').modal('toggle');
+                        } else if (res.status == 'phone_number_needed') {
+                            console.log(res);
+                            $('#Modalregistererror').modal('toggle');
+                        } else if (res.status == 'repetitive_ phone_number') {
+                            console.log(res);
+                            $('#Modalregisterwarning').modal('toggle');
+                        } else if (res.status == 'name_needed') {
+                            console.log(res);
+                            $('#Modalregistererror').modal('toggle');
+                        } else if (res.status == 'unknown_error') {
+                            console.log(res);
+                            $('#Modalregistererror').modal('toggle');
+                        } else {
+                            console.log(res);
+                            $('#Modalregistererror').modal('toggle');
+                        }
+                    },
+                    error: function(e, v) {
+                        console.log(res);
+                            $('#Modalregistererror').modal('toggle');
+                    }
+                });  
+            }
+            
+        });
+    }
 });
