@@ -535,18 +535,22 @@ header .li .a {
   letter-spacing: 0.05em;
 }
 
-.nav-item:hover {
-  color: #f7631b !important;
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #f7631b;
   border-bottom: 1px solid #f7631b;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
-
+@media (max-width: 991px) {
+  .navbar-dark .navbar-nav .nav-link:hover{
+    border-bottom: none;
+    transform: none;
+  }
+}
 .navbar-dark .navbar-nav .show>.nav-link,
 .navbar-dark .navbar-nav .active>.nav-link,
 .navbar-dark .navbar-nav .nav-link.show,
 .navbar-dark .navbar-nav .nav-link.active {
   color: #f7631b;
-
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -1147,4 +1151,76 @@ header .li .a {
 .py-4p {
   padding-top: 4px;
   padding-bottom: 4px;
+}
+.dropdown-toggle::after {
+  display: none;
+}
+@media (max-width: 991px) {
+  .dropdown-toggle::after {
+    display: inline-block;
+    margin-right: .05em;
+    vertical-align: .1em;
+  }
+}
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: .5rem 1rem;
+  clear: both;
+  font-size: 15px;
+  font-family: Yekan;
+  font-weight: 550;
+  letter-spacing: 0.05em;
+  color: white;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+.dropdown-menu {
+  display: none;
+  background-color: rgba(4,9,30, 0.7);
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 10;
+  float: left;
+  min-width: 10rem;
+  padding: .5rem 0;
+  margin: .125rem 0 0;
+  font-size: inherit;
+  text-align: right;
+  list-style: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  transform: none !important;
+}
+@media (min-width: 991px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+.dropdown-item:focus, .dropdown-item:hover {
+  color: #f7631b;
+  text-decoration: none;
+  background-color  : inherit;
+  color: #f7631b !important;
+  border-bottom: 1px solid #f7631b;
+}
+.dropdown span{
+  cursor: pointer;
+}
+@media (max-width: 991px) {
+  .dropdown-toggle[aria-expanded="true"]::after {
+    border-bottom: .3em solid;
+    border-right: .3em solid transparent;
+    border-top: 0;
+    border-left: .3em solid transparent;
+  }
+  .dropdown-toggle[aria-expanded="false"] {
+    color: white;
+  }
+  .dropdown-toggle[aria-expanded="true"] {
+    color: #f7631b;
+  }
 }
