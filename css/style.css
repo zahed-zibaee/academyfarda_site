@@ -1223,4 +1223,8 @@ header .li .a {
   .dropdown-toggle[aria-expanded="true"] {
     color: #f7631b;
   }
+  .nav-item {
+    font-size: 18px;
+    line-height: 3.5vh;
+  }
 }
