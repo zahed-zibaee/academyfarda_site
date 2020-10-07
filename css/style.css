@@ -1260,3 +1260,11 @@ header .li .a {
     line-height: 3.5vh;
   }
 }
+.img-thumbnail.teachers {
+  padding: 0rem;
+  background-color: transparent;
+  border: 2px solid #04091e;
+  border-radius: 0rem;
+  max-width: 100%;
+  height: auto;
+}
